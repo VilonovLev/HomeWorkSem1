@@ -19,50 +19,56 @@ Console.WriteLine("Max = "+ max + "\n" + "Min = " + min);
 
 int inputNum, count = 1;
 Console.WriteLine("Задача 4. Введите три целых числа: ");
-max = Convert.ToInt32(Console.ReadLine());
+int maxTask4 = Convert.ToInt32(Console.ReadLine());
 while(count<3)
 {
     inputNum = Convert.ToInt32(Console.ReadLine());
-    if(inputNum > max) {max = inputNum;}
+    if(inputNum > maxTask4) {maxTask4 = inputNum;}
     count++;
 }
-Console.WriteLine("Max = " + max);
+Console.WriteLine("Max = " + maxTask4);
 
 // Задача 6: Напишите программу, которая на вход принимает число и выдаёт, 
 //является ли число чётным (делится ли оно на два без остатка).
 
 Console.WriteLine("Задача 6. Введите целое число: ");
-inputNum = Convert.ToInt32(Console.ReadLine());
-if(inputNum % 2 == 0) {Console.WriteLine("Четное");}
+int inputNumTask6 = Convert.ToInt32(Console.ReadLine());
+if(inputNumTask6 % 2 == 0) {Console.WriteLine("Четное");}
 else {Console.WriteLine("Не четное");}
 
 // Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе 
 //показывает все чётные числа от 1 до N.
 
 Console.WriteLine("Задача 8. Введите целое число: ");
-inputNum = Convert.ToInt32(Console.ReadLine());
+int inputNumTask8 = Convert.ToInt32(Console.ReadLine()),
+    step;
 string result = "";
 
-if (inputNum < 2 & inputNum > -2) 
+if (inputNumTask8 < 2 & inputNumTask8 > -2) 
 {
     Console.WriteLine("Нет четных чисел.");
     
 }
 else 
 {
-    if (inputNum > 0)
+    if (inputNumTask8 > 0)
     {
-        for(int i = 2; i <= inputNum; i += 2) 
+        step = 2;
+        while(step <= inputNumTask8)
         {
-            result += (Convert.ToString(i) + ", ");
+            result += (Convert.ToString(step) + ", ");
+            step += 2;
         }
     }
     else
     {
-    for(int i = -2; i >= inputNum; i -= 2) 
-        {   
-            result += (Convert.ToString(i) + ", ");
+        step = -2;
+        while(step >= inputNumTask8)
+        {
+            result += (Convert.ToString(step) + ", ");
+            step -= 2;
         }
+    
     }
-Console.Write("Все четные числа от 0 до "+ inputNum + ": " + result);
+Console.Write("Все четные числа от 0 до "+ inputNumTask8 + ": " + result);
 }
