@@ -17,13 +17,14 @@ Console.WriteLine("Max = "+ max + "\n" + "Min = " + min);
 
 // Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
 
-int num;
+int inputNum, count = 1;
 Console.WriteLine("Задача 4. Введите три целых числа: ");
-for(int i = 0; i < 3; ++i)
+max = Convert.ToInt32(Console.ReadLine());
+while(count<3)
 {
-    if(i == 0) { max = Convert.ToInt32(Console.ReadLine()); continue; }
-    num = Convert.ToInt32(Console.ReadLine());
-    max = Math.Max(max,num);
+    inputNum = Convert.ToInt32(Console.ReadLine());
+    if(inputNum > max) {max = inputNum;}
+    count++;
 }
 Console.WriteLine("Max = " + max);
 
@@ -31,37 +32,37 @@ Console.WriteLine("Max = " + max);
 //является ли число чётным (делится ли оно на два без остатка).
 
 Console.WriteLine("Задача 6. Введите целое число: ");
-num = Convert.ToInt32(Console.ReadLine());
-string evenOrNo = num % 2 == 0 ? "Четное" : "Не четное";
-Console.WriteLine(evenOrNo);
+inputNum = Convert.ToInt32(Console.ReadLine());
+if(inputNum % 2 == 0) {Console.WriteLine("Четное");}
+else {Console.WriteLine("Не четное");}
 
 // Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе 
 //показывает все чётные числа от 1 до N.
 
 Console.WriteLine("Задача 8. Введите целое число: ");
-num = Convert.ToInt32(Console.ReadLine());
+inputNum = Convert.ToInt32(Console.ReadLine());
 string result = "";
 
-if (num < 2 & num > -2) 
+if (inputNum < 2 & inputNum > -2) 
 {
     Console.WriteLine("Нет четных чисел.");
     
 }
 else 
 {
-    if (num > 0)
+    if (inputNum > 0)
     {
-        for(int i = 2; i <= num; i += 2) 
+        for(int i = 2; i <= inputNum; i += 2) 
         {
             result += (Convert.ToString(i) + ", ");
         }
     }
     else
     {
-    for(int i = -2; i >= num; i -= 2) 
+    for(int i = -2; i >= inputNum; i -= 2) 
         {   
             result += (Convert.ToString(i) + ", ");
         }
     }
-Console.Write("Все четные числа от 0 до "+ num + ": " + result);
+Console.Write("Все четные числа от 0 до "+ inputNum + ": " + result);
 }
