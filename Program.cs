@@ -7,11 +7,13 @@ int numFirst = Convert.ToInt32(Console.ReadLine()),
 int min,max;
     if (numFirst > numSecond)
     {
-        max = numFirst; min = numSecond;
+        max = numFirst; 
+        min = numSecond;
     }
     else
     {
-        min = numFirst; max = numSecond;
+        min = numFirst; 
+        max = numSecond;
     }
 Console.WriteLine("Max = "+ max + "\n" + "Min = " + min);
 
@@ -23,7 +25,10 @@ int maxTask4 = Convert.ToInt32(Console.ReadLine());
 while(count<3)
 {
     inputNum = Convert.ToInt32(Console.ReadLine());
-    if(inputNum > maxTask4) {maxTask4 = inputNum;}
+    if(inputNum > maxTask4) 
+    {
+        maxTask4 = inputNum;
+    }
     count++;
 }
 Console.WriteLine("Max = " + maxTask4);
@@ -33,8 +38,14 @@ Console.WriteLine("Max = " + maxTask4);
 
 Console.WriteLine("Задача 6. Введите целое число: ");
 int inputNumTask6 = Convert.ToInt32(Console.ReadLine());
-if(inputNumTask6 % 2 == 0) {Console.WriteLine("Четное");}
-else {Console.WriteLine("Не четное");}
+if(inputNumTask6 % 2 == 0) 
+{
+    Console.WriteLine("Четное");
+}
+else 
+{
+    Console.WriteLine("Не четное");
+}
 
 // Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе 
 //показывает все чётные числа от 1 до N.
@@ -46,8 +57,7 @@ string result = "";
 
 if (inputNumTask8 < 2 & inputNumTask8 > -2) 
 {
-    Console.WriteLine("Нет четных чисел.");
-    
+    Console.WriteLine("Нет четных чисел.");   
 }
 else 
 {
